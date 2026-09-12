@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>معرض ذكرياتي</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Tahoma", sans-serif;
+    background: #fff5f7;
+  }
+
+  .gallery-container {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    color: #c0392b;
+    margin-bottom: 25px;
+  }
+
+  /* شبكة الصور المرنة */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  /* كارد الصورة */
+  .photo-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  /* الصورة نفسها */
+  .photo-card img {
+     width: 100%;
+  height: 250px; /* ارتفاع ثابت لكل الصور */
+  object-fit: cover; /* يخلي القص احترافي */
+  border-bottom: 0;
+  }
+
+  /* الكابشن */
+  .caption {
+    padding: 12px;
+    color: #555;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  /* زر الرجوع */
+  .back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 25px;
+    background: #c0392b;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .back-btn:hover {
+    background: #e74c3c;
+  }
+
+/* زر الموسيقى العائم */
+#music-toggle {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #c0392b;
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  animation: floatBtn 3s ease-in-out infinite;
+  z-index: 999;
+
+  #music-toggle {
+  width: 70px;      /* كان 55 */
+  height: 70px;     /* كان 55 */
+  font-size: 30px;  /* كان 24 */
+}
+}
+
+#music-toggle:hover {
+  transform: scale(1.15);
+  background: #e74c3c;
+}
+
+/* حركة لطيفة للزر */
+@keyframes floatBtn {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+
+</style>
+</head>
+
+<body>
+<audio id="bg-music" src="Media/you-are-the-reason.mp3" autoplay loop></audio>
+<div class="gallery-container">
+  <h1 class="title">معرض ذكرياتي</h1>
+<div id="music-toggle">🔊</div>
+  <div class="gallery">
+
+    <!-- مثال صور — غيّر المسارات حسب صورك -->
+    <div class="photo-card">
+      <img src="1.jpeg">
+      <div class="caption">💖💖💖</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="2.jpeg">
+      <div class="caption">ضحكة من القلب ما تتنسيش.</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="3.jpeg">
+      <div class="caption">Sweet day 💖</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="4.jpeg">
+      <div class="caption">حبيبة قلبي 💖</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="5.jpeg">
+      <div class="caption"> عبدالرحمن 💕</div>
+    </div>
+ <div class="photo-card">
+      <img src="6.jpeg">
+      <div class="caption">الصيف وسنينه 😒😂</div>
+    </div>
+
+<div class="photo-card">
+      <img src="7.jpeg">
+      <div class="caption">موقع ربضان 😎</div>
+    </div>
+
+<div class="photo-card">
+      <img src="8.jpeg">
+      <div class="caption">أيام الرويس</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="9.jpeg">"
+
+      <div class="caption">محمد السيد  💖</div>
+
+    </div>
+
+
+<div class="photo-card">
+      <img src="10.jpeg">
+      <div class="caption">ملناش في الطيب نصيب</div>
+    </div>
+
+<div class="photo-card">
+      <img src="11.jpeg">
+      <div class="caption">  احلي سهرة 🌹💖</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="12.jpeg">
+      <div class="caption">Mira</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="13.jpeg">
+      <div class="caption">Graduation 😘</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="14.jpeg">
+      <div class="caption">Yummy 🤤</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="15.jpeg">
+      <div class="caption">Y</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="16.jpeg">
+      <div class="caption">أسوء زكري </div>
+    </div>
+
+<div class="photo-card">
+      <img src="17.jpeg">
+      <div class="caption">Y</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="18.jpeg">
+      <div class="caption">أحلى ضحكة من القلب.</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="19.jpeg">
+      <div class="caption">Kitty  😴😴</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="20.jpeg">
+      <div class="caption"> بنتي حبيبتي 🥰😘😘😍</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="21.jpeg">
+      <div class="caption">بنت قلبي 🥰😘😘😍</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="22.jpeg">
+      <div class="caption">Nader 😍😍</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="photo5.jpg">
+      <div class="caption">أحلى أيام حياتنا.</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="photo5.jpg">
+      <div class="caption">أحلى أيام حياتنا.</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="photo5.jpg">
+      <div class="caption">أحلى أيام حياتنا.</div>
+    </div>
+
+
+<div class="photo-card">
+      <img src="photo5.jpg">
+      <div class="caption">أحلى أيام حياتنا.</div>
+    </div>
+
+
+    
+  </div>
+
+  <a href="index.html" class="back-btn">رجوع</a>
+</div>
+<script>
+  const music = document.getElementById("bg-music");
+  const toggleBtn = document.getElementById("music-toggle");
+
+  let isPlaying = true;
+
+  toggleBtn.addEventListener("click", () => {
+    if (isPlaying) {
+      music.pause();
+      toggleBtn.textContent = "🔈"; // رمز إيقاف
+    } else {
+      music.play();
+      toggleBtn.textContent = "🔊"; // رمز تشغيل
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // حل مشكلة المتصفحات اللي تمنع التشغيل التلقائي
+  window.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+    }
+  });
+</script>
+
+</body>
+</html>
